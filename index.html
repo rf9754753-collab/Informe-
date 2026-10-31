@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe UNEFA - Capa 4: Ancho de Banda</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <!-- HOJA 1: PORTADA -->
+    <div class="hoja portada">
+        <div class="logos-container">
+            <img src="Logo-Unefa.png" alt="Logo UNEFA Izquierda" class="logo">
+            <img src="Logo-Unefa.png" alt="Logo UNEFA Derecha" class="logo">
+        </div>
+
+        <div class="encabezado-institucional">
+            <p>REPÚBLICA BOLIVARIANA DE VENEZUELA</p>
+            <p>MINISTERIO DEL PODER POPULAR PARA LA DEFENSA</p>
+            <p>UNIVERSIDAD NACIONAL EXPERIMENTAL POLITÉCNICA</p>
+            <p>DE LA FUERZA ARMADA NACIONAL</p>
+            <p>UNEFA - NÚCLEO GUÁRICO</p>
+            <p>INGENIERÍA DE SISTEMAS - VIII SEMESTRE</p>
+        </div>
+
+        <div class="titulo-portada">
+            <h1>Capa 4: Ancho de Banda</h1>
+        </div>
+
+        <div class="firmas-portada">
+            <div class="firma-izquierda">
+                <p><strong>Profesor:</strong></p>
+                <p>Raúl Blanca</p>
+            </div>
+            <div class="firma-derecha">
+                <p><strong>Bachiller:</strong></p>
+                <p>Rafael Flores</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOJA 2: CONTENIDO - PÁGINA 1 -->
+    <div class="hoja contenido">
+        <div class="cuerpo-texto">
+            <h2>1. Definición de Ancho de Banda</h2>
+            <p>Dependiendo del contexto tecnológico, el término tiene dos acepciones principales:</p>
+            
+            <p><strong>En redes digitales (Tasa de transferencia):</strong> Representa la cantidad máxima de datos que pueden transmitirse a través de un canal de comunicación en una cantidad de tiempo determinada. Se mide comúnmente en bits por segundo (bps, Kbps, Mbps, Gbps).</p>
+            
+            <p><strong>En sistemas analógicos (Rango de frecuencias):</strong> Es la diferencia entre la frecuencia más alta y la frecuencia más baja que un medio de transmisión puede soportar sin una atenuación significativa. Se mide en Hertz (Hz, kHz, MHz, GHz).</p>
+
+            <h2>2. Principios Fundamentales de la Transmisión y el Ancho de Banda</h2>
+            
+            <p><strong>Relación de Shannon-Hartley (Capacidad de Canal):</strong> Establece el límite teórico máximo de la velocidad de datos que se puede transmitir de forma fiable a través de un canal de comunicación con una cantidad específica de ruido. La fórmula demuestra que la capacidad depende directamente del ancho de banda en Hz y de la relación señal-ruido (SNR). A mayor ancho de banda y menor ruido, mayor capacidad de transmisión.</p>
+            
+            <p><strong>Teorema de Nyquist (Ancho de Banda vs. Velocidad de Modulación):</strong> En un canal libre de ruido, este principio indica la tasa máxima de símbolos (pulsos) que se pueden enviar por segundo sin interferencia intersimbólica (Nyquist rate). Demuestra que para transmitir señales digitales de manera óptima, el ancho de banda del canal debe ajustarse a la velocidad de muestreo requerida.</p>
+            
+            <p><strong>Ancho de Banda y Ancho de Banda Espectral:</strong> Toda señal de datos está compuesta por múltiples frecuencias (harmónicos). Cuanto mayor sea el ancho de banda disponible en el medio físico (como fibra óptica, cable coaxial o aire en redes inalámbricas), más componentes de frecuencia de la señal original podrán pasar sin distorsión, permitiendo enviar más información simultáneamente.</p>
+        </div>
+        <div class="numero-pagina">1</div>
+    </div>
+
+    <!-- HOJA 3: CONTENIDO - PÁGINA 2 -->
+    <div class="hoja contenido">
+        <div class="cuerpo-texto">
+            <p><strong>Multiplexación (Aprovechamiento del Ancho de Banda):</strong> Como el ancho de banda suele ser un recurso limitado y costoso, se utilizan técnicas de multiplexación para dividirlo y compartirlo entre múltiples usuarios o flujos de datos:</p>
+            
+            <p><strong>FDM (Frequency Division Multiplexing):</strong> Divide el ancho de banda analógico en bandas de frecuencia independientes (ej. radio FM, televisión por cable).</p>
+            
+            <p><strong>TDM (Time Division Multiplexing):</strong> Divide el canal en intervalos de tiempo rotativos para que cada usuario transmita a máxima velocidad por turnos.</p>
+            
+            <p><strong>WDM (Wavelength Division Multiplexing):</strong> Utilizado en fibra óptica, separa canales de datos usando distintas longitudes de onda de luz.</p>
+
+            <p><strong>Atenuación, Distorsión y Ruido:</strong> A medida que una señal viaja a través de un medio de transmisión, su energía disminuye (atenuación) y puede sufrir interferencias electromagnéticas o térmicas (ruido). Los canales con mayor ancho de banda útil resisten mejor la degradación si se combinan con técnicas adecuadas de codificación y modulación (como QAM o PSK).</p>
+        </div>
+        <div class="numero-pagina">2</div>
+    </div>
+
+</body>
+</html>

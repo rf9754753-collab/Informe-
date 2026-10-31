@@ -1,0 +1,219 @@
+/* ============================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3d3d3; /* Fondo gris claro */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 20px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* ============================================
+   ESTILO DE HOJA (TAMAÑO CARTA)
+   ============================================ */
+.hoja {
+    width: 21.59cm;
+    height: 27.94cm;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   MÁRGENES UNEFA (IZQ 4cm, SUP 3cm, DER 3cm, INF 3cm)
+   ============================================ */
+.portada,
+.contenido {
+    padding-top: 3cm;
+    padding-right: 3cm;
+    padding-bottom: 3cm;
+    padding-left: 4cm;
+}
+
+/* ============================================
+   PORTADA
+   ============================================ */
+.portada {
+    justify-content: space-between;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.encabezado-institucional {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-size: 12pt;
+    margin-top: 10px;
+}
+
+.encabezado-institucional p {
+    margin: 0;
+}
+
+.titulo-portada {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.titulo-portada h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.firmas-portada {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.firma-izquierda,
+.firma-derecha {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 12pt;
+}
+
+/* ============================================
+   CONTENIDO Y TEXTO
+   ============================================ */
+.contenido {
+    justify-content: flex-start;
+}
+
+.cuerpo-texto {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.cuerpo-texto h2 {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: none;
+}
+
+.cuerpo-texto p {
+    text-align: justify;
+    text-indent: 1.25cm;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Los títulos h2 no llevan sangría y tienen margen superior */
+.cuerpo-texto h2 + p {
+    margin-top: 0;
+}
+
+/* ============================================
+   NUMERACIÓN DE PÁGINA (INFERIOR CENTRADA)
+   ============================================ */
+.numero-pagina {
+    position: absolute;
+    bottom: 1.5cm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ============================================
+   RESPONSIVE (PARA MÓVILES)
+   ============================================ */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px 5px;
+        gap: 15px;
+    }
+
+    .hoja {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 1.5cm 1cm;
+    }
+
+    .portada,
+    .contenido {
+        padding-top: 1.5cm;
+        padding-right: 1cm;
+        padding-bottom: 2.5cm;
+        padding-left: 1cm;
+    }
+
+    .titulo-portada h1 {
+        font-size: 18pt;
+    }
+
+    .encabezado-institucional {
+        font-size: 10pt;
+    }
+
+    .cuerpo-texto p {
+        text-indent: 1cm;
+        font-size: 11pt;
+    }
+
+    .numero-pagina {
+        bottom: 0.8cm;
+    }
+}
+
+/* ============================================
+   ESTILOS DE IMPRESIÓN (OPCIONAL)
+   ============================================ */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+        gap: 0;
+    }
+
+    .hoja {
+        box-shadow: none;
+        page-break-after: always;
+        width: 21.59cm;
+        height: 27.94cm;
+    }
+
+    .hoja:last-child {
+        page-break-after: auto;
+    }
+}
